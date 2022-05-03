@@ -1,10 +1,11 @@
 import numpy as np
-nlin = int(input('insira o numero de colunas \n'))
-ncol = int(input('insira o numero de linhas \n'))
+import random
+nlin = int(input('insira o numero de linhas \n'))
+ncol = int(input('insira o numero de colunas \n'))
 if(nlin and ncol > 0):
-    a = np.arange(nlin*ncol).reshape(nlin, ncol)
-    for w in range(ncol):
-        for h in range(nlin):
+    a = np.random.randint(10, size=(nlin, ncol))
+    for w in range(nlin):
+        for h in range(ncol):
             a[w, h] = int(input(f'qual o valor em [{w},{h}]'))
     print(f'a matriz gerada aleatoriameente é: \n {a} \n')
     b_lin = []
@@ -25,4 +26,4 @@ if(nlin and ncol > 0):
             a[k1, i] = 0
     print(f'a nova matriz após a modificação é: \n{a}\n')
 else:
-  print('numero de coluna ou linha menor ou igual a 0')
+    print('numero de coluna ou linha menor ou igual a 0')
