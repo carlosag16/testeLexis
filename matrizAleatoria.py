@@ -4,7 +4,6 @@ import random
 nlin = int(input('insira o numero de linhas \n'))
 ncol = int(input('insira o numero de colunas \n'))
 if(nlin and ncol > 0):
-  #a = np.arange(nlin*ncol).reshape((nlin, ncol),order='F')
   a = np.random.randint(10, size=(nlin, ncol)) 
   print(f'a matriz gerada aleatoriameente é: \n {a} \n')
   b_lin = []
